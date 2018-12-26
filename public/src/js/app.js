@@ -1,24 +1,11 @@
-
-var deferredPrompt;
-
-if (!window.Promise) {
-  window.Promise = Promise;
+const check = (psw) => {
+  var form_valid = (document.getElementById('psw').value == 'abcd');
+  if (!form_valid) {
+    alert('틀렸습니다. ㅠㅠ');
+    return true;
+  } else {
+    
+    window.location.href='./quiz.html';
+    return false;
+  }
 }
-
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker
-    .register('/sw.js')
-    .then(function () {
-      console.log('Service worker registered!');
-    })
-    .catch(function(err) {
-      console.log(err);
-    });
-}
-
-window.addEventListener('beforeinstallprompt', function(event) {
-  console.log('beforeinstallprompt fired');
-  event.preventDefault();
-  deferredPrompt = event;
-  return false;
-});
