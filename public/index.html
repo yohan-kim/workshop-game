@@ -6,24 +6,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="./src/css/app.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="./src/css/bootstrap.min.css">
+  <link rel="manifest" href="/manifest.json">
   <title>워크샵 앱</title>
 </head>
 
-<body class="centered-form">
-  <div class="centered-form__form">
-    <form name='pswForm' onsubmit="return check()">
-      <div class="form-field">
-        <h3>비밀번호를 입력하세요.<h3>
-         <h6>(영문자로만 되어있음)</h6>
-      </div>
-      <div class="form-field">
-        <input id='psw' type="password" maxlength="15" name="psw" autofocus minlength="3" />
-      </div>
-      <div class="form-field">
-        <button>확인</button>
-      </div>
-    </form>
+<body>
+
+  <div class="centered-form">
+    <div class="centered-form__form">
+      <form name='pswForm' onsubmit="return check()">
+        <div class="form-field">
+          <h3 class=''>비밀번호 입력<h3>
+              <h6 class='text-muted'>(영문자로만 되어있음)</h6>
+        </div>
+        <div class="form-field">
+          <input id='psw' class='form-control' type="password" maxlength="15" name="psw" autofocus minlength="3" />
+        </div>
+        <div class="form-field">
+          <button type='submit'>확인</button>
+        </div>
+      </form>
+    </div>
+
   </div>
   <script src="./src/js/app.js"></script>
+  <script src="./src/js/jquery-3.3.1.min.js"></script>
+  <script src="./src/js/bootstrap.min.js"></script>
 </body>
+
 </html>
