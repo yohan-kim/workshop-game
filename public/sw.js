@@ -15,7 +15,9 @@ self.addEventListener('install', event => {
         '/src/images/icons/icon-192.png',
         '/src/js/app.js',
         '/src/js/bootstrap.min.js',
-        '/src/js/jquery-3.3.1.min.js'
+        '/src/js/jquery-3.3.1.min.js',
+        'https://fonts.googleapis.com/css?family=Roboto:400,700',
+        "https://fonts.googleapis.com/icon?family=Material+Icons"
       ])
     })
   )
