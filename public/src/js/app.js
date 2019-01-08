@@ -9,7 +9,7 @@ if ('serviceWorker' in navigator) {
  }
 
 const check = (psw) => {
-  var form_valid = (document.getElementById('psw').value == 'abcd');
+  var form_valid = (document.getElementById('psw').value == 'abcd' ||document.getElementById('psw').value =='ehdrhehdfkr' );
   if (!form_valid) {
     $('#psw').addClass('is-invalid');
     return true;
