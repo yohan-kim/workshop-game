@@ -13,16 +13,41 @@
 <body>
     <div class='container'>
         <div class='row myRow'>
-            <button class="col game game-1"> Game 1</button>
+            <button id='game-1' class="col game game-1" data-psw='asdf' type='button' data-toggle="modal" data-target="#myModal">
+                Game 1</button>
         </div>
         <div class='row myRow'>
-            <button class="col game game-1"> Game 2</button>
+            <button id='game-2' class="col game game-1" data-psw='inno12'> Game 2</button>
         </div>
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Password 입력</h4>
+                    </div>
+                    <div class="modal-body">
+                        <input type="text">
+                    </div>
+                    <div class="modal-footer"> <button type="button" class="btn btn-primary">확인</button>
+                        <button type="button" class="btn btn-dark" data-dismiss="modal">닫기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
     </div>
 
     <div class='bg' alt=""></div>
-    <script src="./src/js/quiz.js"></script>
-    <script src="./src/js/bootstrap.min.js"></script>
+
+
     <script src="./src/js/jquery-3.3.1.min.js"></script>
+    <script src="./src/js/bootstrap.min.js"></script>
+    <script src="./src/js/quiz.js"></script>
 </body>
+
 </html>
