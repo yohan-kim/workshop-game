@@ -5,7 +5,7 @@ $(document).ready(function () {
     var i = 0;
     var score = 0;
     var que1 = {
-        que: "Which tag is used to create clickable link?",
+        que: "아 왜그러세요~",
         ans: ["&lt;hyperlink&gt;", "&lt;a&gt;", "&lt;link&gt;", "&lt;source&gt;"],
         right: "1"
     };
@@ -16,7 +16,8 @@ $(document).ready(function () {
     };
     var que3 = {
         que: " Which HTML element is used to display a scalar measurement within a range?",
-        ans: ["&lt;meter&gt;", "&lt;range&gt;", "&lt;scalar&gt;", "&lt;progress&gt;"], right: "0"
+        ans: ["&lt;meter&gt;", "&lt;range&gt;", "&lt;scalar&gt;", "&lt;progress&gt;"],
+        right: "0"
     };
     var que4 = {
         que: "Choose the correct HTML element to define important text?",
@@ -45,15 +46,12 @@ $(document).ready(function () {
         $(".quiz").show();
         $("#num").text(i + 1 + "/" + quelst.length)
         $("#q").text(quelst[i].que);
-        $("#op1").html("<input type='radio' name='opt' id='o1' value='0'><label for='o1'>" + quelst[i].ans[0]) + "</label>";
+        $("#op1").html("<input type='text' name='opt' id='o1' value='0'><label for='o1'>" + quelst[i].ans[0]) + "</label>";
         $("#op2").html("<input type='radio' name='opt' id='o2' value='1'><label for='o2'>" + quelst[i].ans[1]) + "</label>";
         $("#op3").html("<input type='radio' name='opt' id='o3' value='2'><label for='o3'>" + quelst[i].ans[2]) + "</label>";
         $("#op4").html("<input type='radio' name='opt' id='o4' value='3'><label for='o4'>" + quelst[i].ans[3]) + "</label>";
-
     });
     $("#sub").click(function () {
-
-
         if ($("input[name='opt']:checked").val() != null) {
             if ($("input[name='opt']:checked").val() == quelst[i].right) {
                 score++;
