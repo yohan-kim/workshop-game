@@ -6,8 +6,8 @@ $(document).ready(function () {
     var score = 0;
     var que1 = {
         que: "아 왜그러세요~",
-        ans: ["&lt;hyperlink&gt;", "&lt;a&gt;", "&lt;link&gt;", "&lt;source&gt;"],
-        right: "1"
+        // ans: ["&lt;hyperlink&gt;", "&lt;a&gt;", "&lt;link&gt;", "&lt;source&gt;"],
+        right: "김선태"
     };
     var que2 = {
         que: "Which tag is used to specify a list of prefined options for input controls?",
@@ -46,18 +46,20 @@ $(document).ready(function () {
         $(".quiz").show();
         $("#num").text(i + 1 + "/" + quelst.length)
         $("#q").text(quelst[i].que);
-        $("#op1").html("<input type='text' name='opt' id='o1' value='0'><label for='o1'>" + quelst[i].ans[0]) + "</label>";
-        $("#op2").html("<input type='radio' name='opt' id='o2' value='1'><label for='o2'>" + quelst[i].ans[1]) + "</label>";
-        $("#op3").html("<input type='radio' name='opt' id='o3' value='2'><label for='o3'>" + quelst[i].ans[2]) + "</label>";
-        $("#op4").html("<input type='radio' name='opt' id='o4' value='3'><label for='o4'>" + quelst[i].ans[3]) + "</label>";
+        $("#op1").html("<input type='text' name='opt' id='o1' required placeholder='답 :'><label for='o1'>");
     });
     $("#sub").click(function () {
-        if ($("input[name='opt']:checked").val() != null) {
-            if ($("input[name='opt']:checked").val() == quelst[i].right) {
+  
+        if ($("#o1").val() != null) {
+            if ($("#o1").val() == quelst[i].right) {
                 score++;
             }
             else {
-                wrong.push(i);
+                $('#o1').addClass('bg--red');
+                setTimeout(() => {
+                    $("#o1").removeClass('bg--red');
+                }, 500);
+                return wrong.push(i);
             }
             $("#sub").hide();
             $(".score").text(score);
@@ -67,7 +69,6 @@ $(document).ready(function () {
             else {
                 reslt();
             }
-
         }
         else {
             $(".p").text("Select One option");
@@ -78,10 +79,7 @@ $(document).ready(function () {
             i++;
         }
         $("#q").text(quelst[i].que);
-        $("#op1").html("<input type='radio' name='opt' id='o1' value='0'><label for='o1'>" + quelst[i].ans[0]) + "</label>";
-        $("#op2").html("<input type='radio' name='opt' id='o2' value='1'><label for='o2'>" + quelst[i].ans[1]) + "</label>";
-        $("#op3").html("<input type='radio' name='opt' id='o3' value='2'><label for='o3'>" + quelst[i].ans[2]) + "</label>";
-        $("#op4").html("<input type='radio' name='opt' id='o4' value='3'><label for='o4'>" + quelst[i].ans[3]) + "</label>";
+        $("#op1").html("<input type='text' name='opt' id='o1' required placeholder='답 :'>" );
         $("#num").text(i + 1 + "/" + quelst.length);
         $("#sub").show();
     }
@@ -99,40 +97,40 @@ $(document).ready(function () {
             $(".message").text("Great!!You have really good knowledge of HTML and CSS.");
         }
     }
-    $("#an").click(function () {
-        $(".result").hide();
-        $(".answers").show();
-        if ((wrong.toString()).search("0") != -1) {
-            $("#a1").css('color', '#ff6347');
-        }
-        if ((wrong.toString()).search("1") != -1) {
-            $("#a2").css('color', '#ff6347');
-        }
-        if ((wrong.toString()).search("2") != -1) {
-            $("#a3").css('color', '#ff6347');
-        }
-        if ((wrong.toString()).search("3") != -1) {
-            $("#a4").css('color', '#ff6347');
-        } a
-        if ((wrong.toString()).search("4") != -1) {
-            $("#a5").css('color', '#ff6347');
-        }
-        if ((wrong.toString()).search("5") != -1) {
-            $("#a6").css('color', '#ff6347');
-        }
-        if ((wrong.toString()).search("6") != -1) {
-            $("#a7").css('color', '#ff6347');
-        }
-        if ((wrong.toString()).search("7") != -1) {
-            $("#a8").css('color', '#ff6347');
-        }
-        if ((wrong.toString()).search("8") != -1) {
-            $("#a9").css('color', '#ff6347');
-        }
-        if ((wrong.toString()).search("9") != -1) {
-            $("#a10").css('color', '#ff6347');
-        }
+    // $("#an").click(function () {
+    //     $(".result").hide();
+    //     $(".answers").show();
+    //     if ((wrong.toString()).search("0") != -1) {
+    //         $("#a1").css('color', '#ff6347');
+    //     }
+    //     if ((wrong.toString()).search("1") != -1) {
+    //         $("#a2").css('color', '#ff6347');
+    //     }
+    //     if ((wrong.toString()).search("2") != -1) {
+    //         $("#a3").css('color', '#ff6347');
+    //     }
+    //     if ((wrong.toString()).search("3") != -1) {
+    //         $("#a4").css('color', '#ff6347');
+    //     } a
+    //     if ((wrong.toString()).search("4") != -1) {
+    //         $("#a5").css('color', '#ff6347');
+    //     }
+    //     if ((wrong.toString()).search("5") != -1) {
+    //         $("#a6").css('color', '#ff6347');
+    //     }
+    //     if ((wrong.toString()).search("6") != -1) {
+    //         $("#a7").css('color', '#ff6347');
+    //     }
+    //     if ((wrong.toString()).search("7") != -1) {
+    //         $("#a8").css('color', '#ff6347');
+    //     }
+    //     if ((wrong.toString()).search("8") != -1) {
+    //         $("#a9").css('color', '#ff6347');
+    //     }
+    //     if ((wrong.toString()).search("9") != -1) {
+    //         $("#a10").css('color', '#ff6347');
+    //     }
 
-    });
+    // });
 
 });
