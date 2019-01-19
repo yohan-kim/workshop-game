@@ -121,6 +121,7 @@ button:disabled {
     background: url(../images/background.jpg) no-repeat;
     background-size: cover;
     opacity: 0.9;
+    z-index: -9999;
 }
 
 .centered-form__form {
@@ -129,7 +130,8 @@ button:disabled {
     border-radius: 5px;
     padding: 0 20px;
     margin: 20px;
-    width: 230px
+    width: 230px;
+    z-index:10;
 }
 
 .form-field {
@@ -265,7 +267,7 @@ button:disabled {
     left: 0;
     opacity: .9;
     overflow: hidden;
-    background: url(../images/quiz/bg.jpg) no-repeat;
+    background: url(../images/background.jpg) no-repeat;
     background-size: cover;
     width: 100%;
     height: 100vh;
@@ -276,4 +278,34 @@ button:disabled {
 .container {
     width: 85%;
     position: relative;
+}
+
+.abs{
+    position: absolute;
+}
+
+.Xcenter{
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+}
+
+.Ycenter{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+}
+
+.center{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+.title{
+    width: 250px;
+    height: 144px;
+    z-index: 1;
+    top:50px;
 }

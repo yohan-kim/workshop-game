@@ -3,6 +3,41 @@
     "short_name": "WorkShop",
     "icons": [
         {
+            "src": "/src/images/icons/apple-icon-57x57.png",
+            "type": "image/png",
+            "sizes": "57x57"
+        },
+        {
+            "src": "/src/images/icons/apple-icon-60x60.png",
+            "type": "image/png",
+            "sizes": "60x60"
+        },
+        {
+            "src": "/src/images/icons/apple-icon-72x72.png",
+            "type": "image/png",
+            "sizes": "72x72"
+        },
+        {
+            "src": "/src/images/icons/apple-icon-76x76.png",
+            "type": "image/png",
+            "sizes": "76x76"
+        },
+        {
+            "src": "/src/images/icons/apple-icon-114x114.png",
+            "type": "image/png",
+            "sizes": "114x114"
+        },
+        {
+            "src": "/src/images/icons/apple-icon-120x120.png",
+            "type": "image/png",
+            "sizes": "120x120"
+        },
+        {
+            "src": "/src/images/icons/apple-icon-152x152.png",
+            "type": "image/png",
+            "sizes": "152x152"
+        },
+        {
             "src": "/src/images/icons/icon.png",
             "type": "image/png",
             "sizes": "144x144"
