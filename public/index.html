@@ -36,7 +36,7 @@
 <body>
 
   <div class="centered-form">
-      <img src="src/images/title.png" alt="" class="title Xcenter">
+    <img src="src/images/title.png" alt="" class="title Xcenter">
     <div class="centered-form__form">
       <form name='pswForm' onsubmit="return check()">
         <div class="form-field">
@@ -47,16 +47,29 @@
           <input id='psw' class='form-control' type="password" maxlength="15" name="psw" autofocus minlength="3" />
         </div>
         <div class="form-field">
-          <button id='submit'type='submit'></button>
+          <button id='submit' class='btn btn-primary' type='submit'>Go!</button>
         </div>
       </form>
     </div>
+    <button id="myBtn" class='btn btn-primary'>카오락 정보</button>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div>
+          <iframe src="https://s3.ap-northeast-2.amazonaws.com/test.innoboost/khao.pdf" style='width:100%; height: 80vh;'></iframe>
+        </div>
+      </div>
+    </div>
     <h6 id='whoMade'>made by 요한 2019</h6>
   </div>
+
   <script src="./src/js/app.js"></script>
   <script src="./src/js/core.js"></script>
   <script src="./src/js/jquery-3.3.1.min.js"></script>
   <script src="./src/js/bootstrap.min.js"></script>
+ 
 </body>
 
 </html>

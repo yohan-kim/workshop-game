@@ -16,7 +16,7 @@ $(document).ready(function () {
         right: "정유리"
     };
     var que4 = {
-        que: "디자인은 내가 할께, 넌 니 일이나 해",
+        que: "디자인은 내가 할께,<Br> 넌 니 일이나 해",
         right: "이영신"
     };
     var que5 = {
@@ -28,8 +28,8 @@ $(document).ready(function () {
         right: "오혁근"
     };
     var que7 = {
-        que: "<img src='/src/images/quiz/ear.jpg'/>",
-        right: "김선태"
+        que: "<img src='/src/images/quiz/bora.png'/>",
+        right: "김보라"
     };
     var que8 = {
         que: "<img src='/src/images/quiz/earing.png' style='width: auto !important; height:440px'/>",
@@ -40,10 +40,26 @@ $(document).ready(function () {
         right: "강현진"
     };
     var que10 = {
-        que: "<img src='/src/images/quiz/shoe.png'/>",
+        que: "<img src='/src/images/quiz/jungrae.png'/>",
         right: "이지선"
     };
-    var quelst = [que1, que2, que3, que4, que5, que6, que7, que8, que9, que10];
+    var que11 = {
+        que: "<img src='/src/images/quiz/dujin.jpg'/>",
+        right: "최두진"
+    };
+    var que12 = {
+        que: "<img src='/src/images/quiz/hunji.png'/>",
+        right: "이지선"
+    };
+    var que13 = {
+        que: "<img src='/src/images/quiz/taeksung.png'/>",
+        right: "김택성"
+    };
+    var que14 = {
+        que: "찍어서 맞추세요!<br> <span style='font-size:2rem;'>(힌트:나오지 않은 사람 중에 있음)</span>",
+        right: "강미혜"
+    };
+    var quelst = [que1, que2, que3, que4, que5, que6, que7, que8, que9, que10,que11,que12,que13,que14];
 
     $("#start").click(function () {
         $(".front").hide();
@@ -56,8 +72,7 @@ $(document).ready(function () {
     $("#sub").click(function (e) {
         e.preventDefault();
         if ($("#o1").val() != null) {
-            if ($("#o1").val() == quelst[i].right) {
-        
+            if ($("#o1").val() == quelst[i].right || $("#o1").val() == '' ) {
             } else {
                 //틀렸을 경우 
                 $('#o1').addClass('bg--red');
@@ -65,7 +80,6 @@ $(document).ready(function () {
                     $("#o1").removeClass('bg--red');
                 }, 500);
                 return;
-
             }
             $("#sub").hide();
             if (i != quelst.length - 1) {
@@ -93,5 +107,5 @@ $(document).ready(function () {
 
     $('.btn-back').click(()=>{
         window.location.href='/quiz.html';
-    })
+    });
 });
