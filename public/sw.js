@@ -28,6 +28,7 @@ self.addEventListener('install', event => {
         '/src/images/quiz/game.png',
         '/src/css/app.css',
         '/src/css/quiz_1.css',
+        '/src/css/quiz.css',
         '/src/css/bootstrap.min.css',
         '/src/images/background.jpg',
         '/src/images/icons/icon.png',
