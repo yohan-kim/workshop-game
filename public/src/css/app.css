@@ -355,9 +355,19 @@ button:disabled {
     border: 1px solid #888;
     width: 80%;
     overflow:scroll;
+    height: 80vh;
     /* Could be more or less, depending on screen size */
 }
+.khao{
+    width:100%;
+    height:100%;
+overflow: scroll;
 
+}
+.khao > img{
+    width: 100%;
+    height: auto;
+}
 /* The Close Button */
 .close {
     color: #aaa;

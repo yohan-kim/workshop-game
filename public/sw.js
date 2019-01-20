@@ -15,6 +15,14 @@ self.addEventListener('install', event => {
         '/src/images/start.png',
         '/src/images/background.png',
         '/src/images/button.png',
+        '/src/images/1.png',
+        '/src/images/2.png',
+        '/src/images/3.png',
+        '/src/images/4.png',
+        '/src/images/5.png',
+        '/src/images/6.png',
+        '/src/images/7.png',
+        '/src/images/8.png',
         '/src/images/quiz/bg.jpg',
         '/src/images/quiz/game-1.png',
         '/src/images/quiz/game.png',
@@ -41,7 +49,6 @@ self.addEventListener('install', event => {
         '/src/js/jquery-3.3.1.min.js',
         'https://fonts.googleapis.com/css?family=Roboto:400,700',
         "https://fonts.googleapis.com/icon?family=Material+Icons",
-        'https://s3.ap-northeast-2.amazonaws.com/test.innoboost/khao.pdf'
       ])
     })
   )
