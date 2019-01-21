@@ -227,6 +227,10 @@ button:disabled {
     position: absolute;
     bottom: 3%;
     left: 3%;
+    height: 45px;
+    font-size: 1.6rem;
+    width: 111px;
+    text-align: center;
 }
 
 .modal {

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <link rel="manifest" href="/manifest.json">
     <link rel="stylesheet" href="./src/css/bootstrap.min.css">
     <link rel="stylesheet" href="./src/css/quiz.css">
     <title>퀴즈 시작</title>
@@ -18,7 +19,7 @@
                 Game 1</button>
         </div>
         <div class='row myRow'>
-            <button id='game-2' class="col game game-1" data-psw='inno12'> Game 2</button>
+            <button id='game-2' class="col game game-1" ype='button' data-toggle="modal" data-target="#myModal2"> Game 2</button>
         </div>
 
 
@@ -26,9 +27,26 @@
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-sm">
                 <div class="modal-content">
-                    <form name='pswForm' onsubmit="return check()">
+                    <form name='pswForm' onsubmit="return check('quiz_1')">
                         <div class="modal-body">
                             <label for="quiz_1" class='col-form-label'>Password 입력 :</label><input id='quiz_1'
+                                autofocus class='form-control focusedInput' type="text" maxlength='10' name="psw"
+                                placeholder="Password">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">확인</button>
+                            <button type="button" class="btn btn-dark" data-dismiss="modal">닫기</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <form name='pswForm' onsubmit="return check('quiz_2')">
+                        <div class="modal-body">
+                            <label for="quiz_2" class='col-form-label'>Password 입력 :</label><input id='quiz_2'
                                 autofocus class='form-control focusedInput' type="text" maxlength='10' name="psw"
                                 placeholder="Password">
                         </div>
