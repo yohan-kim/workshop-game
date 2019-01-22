@@ -8,7 +8,7 @@ $(document).ready(function () {
         right: "김선태"
     };
     var que2 = {
-        que: "팀장님, 팀장님 삐지셨어요?",
+        que: "팀장님, 팀장님 <br>삐지셨어요?",
         right: "박정은"
     };
     var que3 = {
@@ -41,7 +41,7 @@ $(document).ready(function () {
     };
     var que10 = {
         que: "<img src='/src/images/quiz/jungrae.png'/>",
-        right: "이지선"
+        right: "장정례"
     };
     var que11 = {
         que: "<img src='/src/images/quiz/dujin.jpg'/>",
@@ -72,7 +72,7 @@ $(document).ready(function () {
     $("#sub").click(function (e) {
         e.preventDefault();
         if ($("#o1").val() != null) {
-            if ($("#o1").val() == quelst[i].right || $("#o1").val() == '' ) {
+            if ($("#o1").val() == quelst[i].right) {
             } else {
                 //틀렸을 경우 
                 $('#o1').addClass('bg--red');

@@ -21,7 +21,9 @@
         <div class='row myRow'>
             <button id='game-2' class="col game game-1" ype='button' data-toggle="modal" data-target="#myModal2"> Game 2</button>
         </div>
-
+        <div class='row myRow'>
+                <button id='game-3' class="col game game-1" ype='button' data-toggle="modal" data-target="#myModal3"> Game 3</button>
+            </div>
 
         <!-- Modal -->
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -58,6 +60,23 @@
                 </div>
             </div>
         </div>
+        <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <form name='pswForm' onsubmit="return check('quiz_3')">
+                            <div class="modal-body">
+                                <label for="quiz_2" class='col-form-label'>Password 입력 :</label><input id='quiz_3'
+                                    autofocus class='form-control focusedInput' type="text" maxlength='10' name="psw"
+                                    placeholder="Password">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-primary">확인</button>
+                                <button type="button" class="btn btn-dark" data-dismiss="modal">닫기</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
     </div>
 
     <div class='bg' alt=""></div>
