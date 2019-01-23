@@ -2,7 +2,7 @@ $(document).ready(function () {
     var que;
     var right;
     var i = 0;
-  
+
     var que1 = {
         que: "아 왜그러세요~",
         right: "김선태"
@@ -12,8 +12,8 @@ $(document).ready(function () {
         right: "박정은"
     };
     var que3 = {
-        que: "어~련~하시겠어요",
-        right: "정유리"
+        que: "바쁘냐?",
+        right: "안경호"
     };
     var que4 = {
         que: "디자인은 내가 할께,<Br> 넌 니 일이나 해",
@@ -59,7 +59,7 @@ $(document).ready(function () {
         que: "찍어서 맞추세요!<br> <span style='font-size:2rem;'>(힌트:나오지 않은 사람 중에 있음)</span>",
         right: "강미혜"
     };
-    var quelst = [que1, que2, que3, que4, que5, que6, que7, que8, que9, que10,que11,que12,que13,que14];
+    var quelst = [que1, que2, que3, que4, que5, que6, que7, que8, que9, que10, que11, que12, que13, que14];
 
     $("#start").click(function () {
         $(".front").hide();
@@ -72,8 +72,7 @@ $(document).ready(function () {
     $("#sub").click(function (e) {
         e.preventDefault();
         if ($("#o1").val() != null) {
-            if ($("#o1").val() == quelst[i].right) {
-            } else {
+            if ($("#o1").val() == quelst[i].right) {} else {
                 //틀렸을 경우 
                 $('#o1').addClass('bg--red');
                 setTimeout(() => {
@@ -87,7 +86,7 @@ $(document).ready(function () {
             } else {
                 reslt();
             }
-        } 
+        }
     });
 
     function next() {
@@ -105,7 +104,7 @@ $(document).ready(function () {
         $(".result").show();
     }
 
-    $('.btn-back').click(()=>{
-        window.location.href='/quiz.html';
+    $('.btn-back').click(() => {
+        window.location.href = '/quiz.html';
     });
 });
