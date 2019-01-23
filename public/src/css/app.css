@@ -5,11 +5,10 @@ button:hover {
     padding: 10px
 }
 
+
 #submit {
-    background: url(../images/start.png) no-repeat;
-    background-size: 100%;
-    width: 60px;
-    height: 60px;
+    width: 45%;
+    height: auto;
     display: block;
     margin: 0 auto;
 }
@@ -44,8 +43,8 @@ h6 {
 
 #whoMade {
     position: absolute;
-    bottom: 0;
-    right: 10px;
+    bottom: 1%;
+    right: 3%;
     font-size: 1.3rem;
 }
 
@@ -96,14 +95,15 @@ button {
     transition: background .3s ease;
 }
 
-.col-form-label{
+.col-form-label {
     font-size: 2rem;
 }
+
 .modal-dialog {
-   position: absolute;
-   top:50%;
-   left:50%;
-   transform: translate(-50%,-93%) !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -93%) !important;
     width: 50%;
 }
 
@@ -121,6 +121,7 @@ button:disabled {
     background: url(../images/background.jpg) no-repeat;
     background-size: cover;
     opacity: 0.9;
+    z-index: -9999;
 }
 
 .centered-form__form {
@@ -129,7 +130,8 @@ button:disabled {
     border-radius: 5px;
     padding: 0 20px;
     margin: 20px;
-    width: 230px
+    width: 230px;
+    z-index: 10;
 }
 
 .form-field {
@@ -151,73 +153,6 @@ button:disabled {
     padding: 10px
 }
 
-.chat {
-    display: flex
-}
-
-.chat__sidebar {
-    overflow-y: scroll;
-    width: 260px;
-    height: 100vh;
-    background: -moz-linear-gradient(125deg, rgba(39, 107, 130, 1) 0, rgba(49, 84, 129, 1) 100%);
-    background: -webkit-gradient(linear, left top, right bottom, color-stop(0, rgba(49, 84, 129, 1)), color-stop(100%, rgba(39, 107, 130, 1)));
-    background: -webkit-linear-gradient(125deg, rgba(39, 107, 130, 1) 0, rgba(49, 84, 129, 1) 100%);
-    background: -o-linear-gradient(125deg, rgba(39, 107, 130, 1) 0, rgba(49, 84, 129, 1) 100%);
-    background: -ms-linear-gradient(125deg, rgba(39, 107, 130, 1) 0, rgba(49, 84, 129, 1) 100%);
-    background: linear-gradient(325deg, rgba(39, 107, 130, 1) 0, rgba(49, 84, 129, 1) 100%)
-}
-
-.chat__footer,
-.chat__sidebar li {
-    background: #e6eaee;
-    padding: 10px
-}
-
-.chat__sidebar h3 {
-    color: #e6eaee;
-    margin: 10px 20px;
-    text-align: left
-}
-
-.chat__sidebar li {
-    border: 1px solid #e1e1e1;
-    border-radius: 5px;
-    margin: 10px
-}
-
-.chat__main {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    width: 100%
-}
-
-.chat__messages {
-    flex-grow: 1;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
-    padding: 10px
-}
-
-.chat__footer {
-    display: flex;
-    flex-shrink: 0
-}
-
-.chat__footer form {
-    flex-grow: 1;
-    display: flex
-}
-
-.chat__footer form * {
-    margin-right: 10px
-}
-
-.chat__footer input {
-    border: none;
-    padding: 10px;
-    flex-grow: 1
-}
 
 .message {
     padding: 10px
@@ -237,27 +172,7 @@ button:disabled {
     color: #999
 }
 
-@media (max-width:600px) {
-    * {
-        font-size: 1rem
-    }
 
-    .chat__sidebar {
-        display: none
-    }
-
-    .chat__footer {
-        flex-direction: column
-    }
-
-    .chat__footer form {
-        margin-bottom: 10px
-    }
-
-    .chat__footer button {
-        margin-right: 0
-    }
-}
 
 .bg {
     position: absolute;
@@ -265,7 +180,7 @@ button:disabled {
     left: 0;
     opacity: .9;
     overflow: hidden;
-    background: url(../images/quiz/bg.jpg) no-repeat;
+    background: url(../images/background.jpg) no-repeat;
     background-size: cover;
     width: 100%;
     height: 100vh;
@@ -276,4 +191,103 @@ button:disabled {
 .container {
     width: 85%;
     position: relative;
+}
+
+.abs {
+    position: absolute;
+}
+
+.Xcenter {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.Ycenter {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.title {
+    width: 250px;
+    height: 144px;
+    z-index: 1;
+    top: 50px;
+}
+
+#myBtn {
+    position: absolute;
+    bottom: 3%;
+    left: 3%;
+    height: 45px;
+    font-size: 1.6rem;
+    width: 111px;
+    text-align: center;
+}
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    overflow: scroll;
+    height: 80vh;
+}
+
+.khao {
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+
+}
+
+.khao>img {
+    width: 100%;
+    height: auto;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
